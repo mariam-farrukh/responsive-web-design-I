@@ -78,7 +78,7 @@ h5 {
 
 /* NAVIGATION BAR FOR BOTH*/
 .container{
-	width: 880px;
+	width: 1000px;
 	margin:auto;
 }
 
@@ -94,7 +94,7 @@ header {
   
 nav {
 	margin-top: 40px; 
-	width: 610px;
+	width: 100%;
 	justify-content: space-between;
 	display: flex;
 }
@@ -110,14 +110,84 @@ nav a:hover {
 }
 
 .navigation{
-	display: flex;
-	padding: 10px;
-	margin: 30px 0 0 40px;
-	justify-content: Space-evenly;
+    display: flex;
+    padding: 10px;
+    margin-top: 30px;
+    justify-content: space-between;
 }
 
 nav .logo {
-	margin: 24px 0 10px 40px;
+	margin: 0px 0 10px 0px;
+}
+#above-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+@media (max-width: 800px){
+    .container{
+        width: 800px;
+        margin:auto;
+    }
+    nav {
+        flex-wrap: wrap;
+        padding: 20px 50px 20px 10px;
+    }
+    .navigation:nth-of-type(1) { order: 2; }
+    .navigation:nth-of-type(2) { order: 3; }
+    .navigation:nth-of-type(3) { order: 4; }
+    .navigation:nth-of-type(4) { order: 5; }
+    .navigation:nth-of-type(5) { order: 6; }
+    .navigation:nth-of-type(6) { order: 7; }
+    .navigation:nth-of-type(7) { order: 1; }
+    .navigation{
+        display: flex;
+        padding: 10px;
+        margin: 30px 0 0 0px;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #above-logo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px;
+        flex-direction: column;
+        padding: 0 270px;
+    }
+}
+@media (max-width: 500px){
+    .container{
+        width: 500px;
+        margin:auto;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        margin: 10px; 
+    }
+    .navigation:nth-of-type(1) { order: 2; }
+    .navigation:nth-of-type(2) { order: 3; }
+    .navigation:nth-of-type(3) { order: 4; }
+    .navigation:nth-of-type(4) { order: 5; }
+    .navigation:nth-of-type(5) { order: 6; }
+    .navigation:nth-of-type(6) { order: 7; }
+    .navigation:nth-of-type(7) { order: 1; }
+    .navigation{
+        padding-bottom: 20px;
+        text-align:center;
+        border-bottom: 1px solid grey;
+        margin: 5px;
+        width: 100%;
+    }
+    #above-logo {
+        padding: 0px;
+        margin: 0px;
+        padding-left: 30px;
+    }
 }
 
 /*navigation bar end */
@@ -127,16 +197,20 @@ header {
 	position: relative;
 }
 
-/*shared between both pages --ends here*/
+
 /*beginning of home page*/
 
 .header-home{
-	height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
 }
   
 .header-text {
-	text-align: center;
-	margin: 55px 0 0 85px;
+    text-align: center;
+    padding: 50px;
+    margin-left: 150px;
   }
   
   header div h1 {
@@ -159,12 +233,36 @@ header {
   
   header img {
 	display: flex;
-	position: absolute;
-	right: 0;
+	/*position: absolute;
+	right: 0;*/
   }
+
+/* media queries for nav*/
+@media (max-width: 800px){
+    header img{
+        display: none;
+    }
+}
+@media (max-width: 500px){
+    .header-home {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .header-text {
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    }
+
+}
+
   
 .section-one {
-	margin-top: 39px;
+    margin-top: 39px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
   
 .section-one div {
@@ -181,15 +279,53 @@ header {
 .section-one div:first-child {
 	margin-right: 10px;
 }
+
+@media (max-width: 800px){
+    .section-one div {
+        width: 380px;
+        height: 100px;
+        padding: 0 20px 0 0;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px){
+    .section-one div {
+        width: auto;
+        height: 100px;
+        padding: 0px 20px 10px 5px;
+        margin-right: 5px;
+    }
+}
   
 .middle-img {
-	margin-top: 38px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+}
+@media (max-width: 800px){
+    .middle-img {
+        margin-top: 20px;
+        padding: 10px 30px 10px 10px;
+        width: 100%;
+    }
+}
+@media (max-width: 500px){
+    .middle-img {
+        margin-top: 10px;
+        padding: 5px 10px 5px 5px;
+        width: 100%;
+    }
 }
   
 .section-two {
-	border-bottom: 1px solid black;
-	margin-top: 36px;
-	padding-bottom: 47px;
+    border-bottom: 1px solid black;
+    margin-top: 36px;
+    padding-bottom: 47px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
   
 .section-two div {
@@ -202,9 +338,40 @@ header {
 .section-two div p {
 	line-height: 1.16;
 }
+
+@media (max-width: 800px){
+    .section-two div {
+        display: flex;
+        width: 250px;
+        padding: 0 20px 0 0;
+        margin-right: 10px;
+        margin-left: 5px;
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px){
+    .section-two {
+        padding-bottom: 10px;
+    }
+    .section-two div {
+        width: auto;
+        padding-bottom: 20px;
+    }
+
+}
   
 address {
-	margin-top: 38px;
+    margin: 38px 0 0 40px;
+}
+@media (max-width: 800px){
+    address {
+        margin: 38px 0 0 0;
+    }
+}
+@media (max-width: 500px){
+    address {
+        margin: 20px 0 0 0;
+    }
 }
   
 address div {
@@ -224,14 +391,23 @@ footer {
   
 footer p {
 	margin-top: 54px;
-	font-size: 14px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
 }
-/*Don't touch anything above this. Home page completed*/
+@media (max-width: 800px){
+    footer p {
+        margin-top: 20px;
+    }
+}
+
+
+
 
 /*SERVICES PAGE*/
 
 /*Top section of services page*/
-.services-top {
+/*.services-top {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -246,11 +422,11 @@ footer p {
 	margin-bottom: 1px;
 	font-size: 150%;
 	padding-left: 10px;
-}
+}*/
 
 /*Middle Section of Services Page*/
 
-.services-body{
+/*.services-body{
 	display:flex;
 	flex-wrap:wrap;
 	flex-direction: row;
@@ -274,10 +450,10 @@ button {
 	border: 2px solid black;
 	font-size: 12px;
 	margin: 10px 0 0 0;
-}
+}*/
 
 /*Bottom Section of Services Page*/
-.information{
+/*.information{
 
 	margin-top: 36px;
 	padding-top: 20px;
@@ -300,5 +476,4 @@ button {
 ul{
 	list-style-type: square;
 	padding: 0 0 0 20px;
-}
-
+}*/
